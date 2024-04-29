@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../style/padrao.css">
 <nav class="menu">
     <a href="index.php"class="nav-item" id="img-logo">
-        <img  id="logo-inicio" src="../Assets/logo/logo-inicio.png" alt="Logo Pitissasria">
+        <!-- <img  id="logo-inicio" src="../Assets/logo/logo-inicio.png" alt="Logo Pitissasria"> -->
     </a>
     <a href="index.php" class="nav-item">inicio</a>
     <?php include('../PHP/sessao/session.php'); ?>

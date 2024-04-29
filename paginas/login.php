@@ -7,5 +7,11 @@
 </head>
 <body>
     <?php include('geral/menu.php');?>
+
+    <main class="container">
+
+    </main>
+
+    <?php include('geral/footer.php')?>
 </body>
 </html>
