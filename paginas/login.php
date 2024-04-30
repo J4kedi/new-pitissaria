@@ -18,7 +18,7 @@
                 <input type="text" name="email" placeholder="Digite email ou username">
                 <!-- Senha -->
                 <label for="senha">Senha:</label>
-                <input type="senha" placeholder="Digite sua senha">
+                <input type="password" placeholder="Digite sua senha">
             </div>
         </form>
         <button id="btn-enviar">Logar</button>
