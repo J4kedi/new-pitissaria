@@ -6,7 +6,7 @@
     <section class="menu-image">
         <div class="content">
           <hgroup>
-            <img class="logo" src="../ASSETS/logo/logo-inicio (1).png" alt="Logo Pitissasria">
+            <img class="logo" src="../ASSETS/logo/logo-inicio.png" alt="Logo Pitissasria">
             <i>A pizza do seu jeito</i>
           </hgroup>
         </div>
