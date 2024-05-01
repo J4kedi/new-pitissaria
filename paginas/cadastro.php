@@ -13,7 +13,7 @@
 
     <div class="form-container">
         <h1>Cadastre-se</h1>
-        <form action="../PHP/cadastro.php" method="post" class="form">
+        <form action="../PHP/forms/cadastro.php" method="post" id="form" class="form">
             <div class="divisao">
                 <!-- Nome -->
                 <label for="nome">Nome:</label>
@@ -49,12 +49,10 @@
                 <label for="num-res">Número Casa:</label>
                 <input type="number" name="num-res" required>
             </div>
+            <!-- Botão Enviar -->
+            <button type="submit" id="btn-enviar">Cadastrar</button>
         </form>
-        <!-- Botão Enviar -->
-        <button type="submit" id="btn-enviar">Cadastrar</button>
     </div>
-
     <?php include('geral/footer.php'); ?>
 </body>
-
 </html>

@@ -6,5 +6,5 @@
         <!-- <img  id="logo-inicio" src="../Assets/logo/logo-inicio.png" alt="Logo Pitissasria"> -->
     </a>
     <a href="index.php" class="nav-item">inicio</a>
-    <?php include('../PHP/sessao/session.php'); ?>
+    <?php include('../PHP/sessao/session.php');?>
 </nav>

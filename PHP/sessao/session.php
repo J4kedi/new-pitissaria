@@ -1,9 +1,13 @@
 <?php 
-    if (isset($_COOKIE['sessao'])) {
-        // O cookie 'sessao' existe, o usuário está logado
-        echo "Olá, $_COOKIE[sessao]! <a href='perfil.php' class='nav-item'>Perfil</a>";
+    session_start();
+
+    if (isset($_SESSION['sessao'])) {
+        echo "<div class='logar'>
+                <a href='perfil.php' class='nav-item'>perfil: Olá, $_SESSION[sessao]!</a>
+                <a href='logout.php' class='nav-item'>logout</a>
+            </div>
+        ";
     } else {
-        // O cookie não existe, o usuário não está logado
         echo "<div class='logar'>
                 <a href='login.php' class='nav-item'>login</a> 
                 <span id='barra'>/</span> 
