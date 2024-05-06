@@ -31,7 +31,7 @@ header {
 
 
 .menu-image {
-    height: calc(100% - 16%);
+    height: calc(100% - 13.5%);
     position: relative;
     overflow: hidden;
     box-shadow: rgba(172, 166, 149, 0.2) 0px 8px 24px;
@@ -94,7 +94,7 @@ header {
 
 .menu {
     background: var(--cor-header);
-    height: 10vh;
+    height: 8vh;
     display: flex;
     font-size: 1.5em;
     font-weight: bolder;

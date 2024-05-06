@@ -11,17 +11,17 @@
 
     <div class="form-container">
         <h1>Logar</h1>
-        <form action="../PHP/login.php" method="post" class="form">
+        <form action="../PHP/forms/login.php" method="post" class="form">
             <div class="divisao">
                 <!-- Email ou Username -->
-                <label for="email">Email ou Username:</label>
-                <input type="text" name="email" placeholder="Digite email ou username">
+                <label for="email-username">Email ou Username:</label>
+                <input type="text" name="email-username" placeholder="Digite email ou username">
                 <!-- Senha -->
                 <label for="senha">Senha:</label>
-                <input type="password" placeholder="Digite sua senha">
+                <input type="password" name="senha" placeholder="Digite sua senha">
             </div>
+            <button id="btn-enviar">Logar</button>
         </form>
-        <button id="btn-enviar">Logar</button>
     </div>
 
     <?php include('geral/footer.php')?>

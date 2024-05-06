@@ -18,6 +18,9 @@
                 <!-- Nome -->
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" required>
+                <!-- Username -->
+                <label for="username">Username:</label>
+                <input type="text" name="username" required>
                 <!-- Email -->
                 <label for="email">Email:</label>
                 <input type="email" name="email" required>
@@ -39,6 +42,9 @@
                 <!-- CEP -->
                 <label for="cep">CEP:</label>
                 <input type="number" name="cep" required>
+                <!-- Estado -->
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" required>
                 <!-- Cidade -->
                 <label for="cidade">Cidade:</label>
                 <input type="text" name="cidade" required>
