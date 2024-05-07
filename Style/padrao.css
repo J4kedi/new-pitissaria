@@ -8,7 +8,7 @@
     --cor-hover: rgb(235, 208, 227);
     --cor-texto: rgb(255, 231, 200);
     --cor-texto-header: #dc9d55;
-    --cor-footer: #202D40;
+    --cor-footer: rgba(33, 37, 41, 1);
     --cor-carregamento: #ffffff;
     --fonte-texto: 'Roboto', sans-serif;
 }
@@ -31,7 +31,7 @@ header {
 
 
 .menu-image {
-    height: calc(100% - 13.5%);
+    height: calc(100% - 20%);
     position: relative;
     overflow: hidden;
     box-shadow: rgba(172, 166, 149, 0.2) 0px 8px 24px;
@@ -94,7 +94,7 @@ header {
 
 .menu {
     background: var(--cor-header);
-    height: 8vh;
+    height: 12vh;
     display: flex;
     font-size: 1.5em;
     font-weight: bolder;
