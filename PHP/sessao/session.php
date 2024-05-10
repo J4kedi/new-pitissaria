@@ -3,7 +3,7 @@
 
     if (isset($_SESSION['sessao'])) {
         echo "<div class='logar'>
-                <a href='perfil.php' class='nav-item'>perfil: Olá, $_SESSION[sessao]!</a>
+                <a href='perfil.php' class='nav-item'>perfil: Olá, $_SESSION[primeiroNome]!</a>
                 <a href='../PHP/logout.php' class='nav-item'>logout</a>
             </div>
         ";

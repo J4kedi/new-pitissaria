@@ -52,11 +52,17 @@
 
         if ($resultadoUsuario) {
             echo "Cadastro realizado com sucesso!";
-            $_SESSION['sessao'] = $nome[0];
+
+            $nomeSeparado = explode(' ', $nome);
+            $_SESSION['sessao'] = $id;
+            $_SESSION['nome'] = $nome;
+            $_SESSION['primeiroNome'] = $nomeSeparado[0];
+            $_SESSION['tipoUsuario'] = $resultadoUsuario['tipo_usuario'];
             header("Location: ../../paginas/perfil.php");
             exit;
-        } else {
-            echo "Erro ao cadastrar usuário.";
         }
+
+        echo 'Erro ao cadastrar usuário.';
+        exit;
     }
 ?>

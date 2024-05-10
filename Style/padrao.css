@@ -96,7 +96,7 @@ header {
     background: var(--cor-header);
     height: 12vh;
     display: flex;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bolder;
     position: sticky;
     top: 0;
@@ -221,6 +221,16 @@ footer .card {
 }
 
 /* Media Queries */
+
+@media screen and (min-height: 900px) {
+    .menu-image {
+        height: calc(100% - 13.5%);
+    }
+
+    .menu {
+        height: 8vh;
+    }
+}
 
 @media screen and (max-width: 890px) {
     .menu {
