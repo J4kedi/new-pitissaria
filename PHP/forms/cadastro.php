@@ -57,7 +57,7 @@
             $_SESSION['sessao'] = $id;
             $_SESSION['nome'] = $nome;
             $_SESSION['primeiroNome'] = $nomeSeparado[0];
-            $_SESSION['tipoUsuario'] = $resultadoUsuario['tipo_usuario'];
+            $_SESSION['tipo_usuario'] = $resultadoUsuario['tipo_usuario'];
             header("Location: ../../paginas/perfil.php");
             exit;
         }

@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $port = "3306";
-$dbname = "pizzaria_db";
+$dbname = "pitissariadb";
 $username = "root";
 $password = "";
 

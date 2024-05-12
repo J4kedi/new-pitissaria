@@ -2,12 +2,11 @@ var $content = $('header .content')
   , $blur    = $('header .overlay')
   , wHeight  = $(window).height();
 
-$(window).on('resize', function(){
+$(window).on('resize', function() {
   wHeight = $(window).height();
 });
 
-window.requestAnimFrame = (function()
-{
+window.requestAnimFrame = (function() {
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
           window.mozRequestAnimationFrame    ||
@@ -16,25 +15,21 @@ window.requestAnimFrame = (function()
           };
 })();
 
-function Scroller()
-{
+function Scroller() {
   this.latestKnownScrollY = 0;
   this.ticking            = false;
 }
 
 Scroller.prototype = {
-
   init: function() {
     window.addEventListener('scroll', this.onScroll.bind(this), false);
     $blur.css('background-image', 'url(../Assets/img-header-edit.jpg)', $('header:first-of-type').css('background-image'));
   },
 
-
   onScroll: function() {
     this.latestKnownScrollY = window.scrollY;
     this.requestTick();
   },
-
   
   requestTick: function() {
     if( !this.ticking ) {

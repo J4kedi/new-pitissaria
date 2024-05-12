@@ -135,7 +135,7 @@ header {
     padding: 0px 8px 0px 8px;
 }
 
-#barra:hover {
+.barra:hover {
     background: var(--cor-header);
     color: var(--cor-texto-header);
 }
@@ -146,6 +146,10 @@ header {
 
 .nav-item:hover {
     background-color: var(--cor-fundo);
+    color: var(--cor-carregamento);
+}
+
+.active:hover {
     color: var(--cor-carregamento);
 }
 

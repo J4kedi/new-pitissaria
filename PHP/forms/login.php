@@ -24,23 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    if ($result['senha'] == $senhaHash && !($result['email'] != null || $result['username'] != null)) {
-        $nomeSeparado = explode(' ', $nome);
-        $_SESSION['sessao'] = $id;
-        $_SESSION['nome'] = $nome;
-        $_SESSION['primeiroNome'] = $nomeSeparado[0];
-        $_SESSION['tipoUsuario'] = $result['tipo_usuario'];
+    if ($result['senha'] == $senhaHash && ($result['email'] == $emailUsername || $result['username'] == $emailUsername)) {
+        $nomeSeparado = explode(' ', $result['nome']);
+        $_SESSION['sessao'] = $result['id'];
+        $_SESSION['nome'] = $result['nome'];
+        $_SESSION['primeiro_nome'] = $nomeSeparado[0];
+        $_SESSION['tipo_usuario'] = $result['tipo_usuario'];
 
-        echo 'anoes';
-
-        header("Location: ../../paginas/jorge.php"); // Redireciona para a página de perfil
+        header("Location: ../../paginas/perfil.php"); // Redireciona para a página de perfil
         exit;
     } 
-    
-    echo '<script>
-        alert("Dados incorretos. Tente novamente.");
-        </script>';
-    sleep(1);
 
     header("location: ../../paginas/login.php");    
     exit;
