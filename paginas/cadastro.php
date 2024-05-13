@@ -33,21 +33,18 @@
                 <!-- CPF -->
                 <label for="cpf">CPF:</label>
                 <input type="text" name="cpf" required>
+            </div>
+            
+            <div class="divisao">
                 <!-- Data de Nascimento -->
                 <label for="data-nascimento">Data de Nascimento:</label>
                 <input type="date" name="data-nascimento" required>
-            </div>
-
-            <div class="divisao">
                 <!-- Telefone -->
                 <label for="celular">Celular:</label>
                 <input type="text" name="celular" required>
                 <!-- CEP -->
                 <label for="cep">CEP:</label>
                 <input type="text" name="cep" required>
-                <!-- Estado -->
-                <label for="estado">Estado:</label>
-                <input type="text" name="estado" required>
                 <!-- Cidade -->
                 <label for="cidade">Cidade:</label>
                 <input type="text" name="cidade" required>

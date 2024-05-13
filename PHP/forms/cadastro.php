@@ -4,29 +4,33 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST['nome'];
+        $nome = $_POST['username'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $confirmarSenha = $_POST['confirmar-senha'];
         $cpf = $_POST['cpf'];
+        $dataNascimento = $_POST['data-nascimento'];
         $celular = $_POST['celular'];
         $cep = $_POST['cep'];
         $cidade = $_POST['cidade'];
         $rua = $_POST['rua'];
         $num_res = $_POST['num-res'];
 
-        if ($_POST['senha'] !== $_POST['confirmar-senha']) {
+        if ($senha !== $confirmarSenha) {
             echo "A senha e a confirmação de senha não coincidem.";
             exit;
         }
 
         // Inserir dados na tabela enderecos
-        $sqlEndereco = "INSERT INTO enderecos (cep, rua, num_res, cidade) 
-                        VALUES (:cep, :rua, :num_res, :cidade)";
+        $sqlEndereco = "INSERT INTO enderecos (cep, rua, num_res, cidade, estado) 
+                        VALUES (:cep, :rua, :num_res, :cidade, :estado)";
         $stmtEndereco = $pdo->prepare($sqlEndereco);
         $resultadoEndereco = $stmtEndereco->execute([
             ':cep' => $cep,
             ':rua' => $rua,
             ':num_res' => $num_res,
             ':cidade' => $cidade,
+            ':estado' => $estado,
         ]);
 
         if (!$resultadoEndereco) {
@@ -36,21 +40,33 @@
 
         // Obter o ID do endereço inserido
         $enderecoId = $pdo->lastInsertId();
-
+        
         // Inserir dados na tabela usuarios
-        $sqlUsuario = "INSERT INTO usuarios (nome, email, senha, cpf, celular, endereco_id) 
-                    VALUES (:nome, :email, MD5(:senha), :cpf, :celular, :endereco_id)";
+        $sqlUsuario = "INSERT INTO usuarios (nome, email, senha, cpf, data_nascimento, celular, username) 
+                    VALUES (:nome, :email, MD5(:senha), :cpf, :data_nascimento, :celular, :username)";
         $stmtUsuario = $pdo->prepare($sqlUsuario);
         $resultadoUsuario = $stmtUsuario->execute([
             ':nome' => $nome,
             ':email' => $email,
             ':senha' => $senha,
             ':cpf' => $cpf,
+            ':data_nascimento' => $dataNascimento,
             ':celular' => $celular,
-            ':endereco_id' => $enderecoId, // Vincula o ID do endereço ao usuário
+            ':username' => $username,
+        ]);
+        
+        $usuarioId = $pdo->lastInsertId();
+
+        // Inserir dados na tabela usuario_endereco
+        $sqlUsuarioEndereco = "INSERT INTO usuario_endereco (usuario_id, endereco_id) 
+                    VALUES (:usuarioId, :enderecoId)";
+        $stmtUsuarioEndereco = $pdo->prepare($sqlUsuarioEndereco);
+        $resultadoUsuarioEndereco = $stmtUsuarioEndereco->execute([
+            ':usuarioId' => $usuarioId,
+            ':enderecoId' => $enderecoId,
         ]);
 
-        if ($resultadoUsuario) {
+        if ($resultadoUsuario and $resultadoUsuarioEndereco) {
             echo "Cadastro realizado com sucesso!";
 
             $nomeSeparado = explode(' ', $nome);
