@@ -3,7 +3,7 @@ $host = "localhost";
 $port = "3306";
 $dbname = "pitissariadb";
 $username = "root";
-$password = "PUC@1234";
+$password = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);

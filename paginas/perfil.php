@@ -45,19 +45,19 @@
             <div class="divisao">
                 <!-- CEP -->
                 <label for="cep">CEP:</label>
-                <input type="text" name="cep" required>
+                <input type="text" name="cep" required value="<?php echo "$cep"?>">
                 <!-- Estado -->
                 <label for="estado">Estado:</label>
-                <input type="text" name="estado" required>
+                <input type="text" name="estado" required value="<?php echo "$estado"?>">
                 <!-- Cidade -->
                 <label for="cidade">Cidade:</label>
-                <input type="text" name="cidade" required>
+                <input type="text" name="cidade" required value="<?php echo "$cidade"?>">
                 <!-- Rua -->
                 <label for="rua">Rua:</label>
-                <input type="text" name="rua" required>
+                <input type="text" name="rua" required value="<?php echo "$rua"?>">
                 <!-- Número Residência -->
                 <label for="num-res">Número Casa:</label>
-                <input type="number" name="num-res" required>
+                <input type="number" name="num-res" required value="<?php echo "$numRes"?>">
             </div>
             <!-- Botão Enviar -->
             <button type="submit" id="btn-enviar">Salvar</button>
