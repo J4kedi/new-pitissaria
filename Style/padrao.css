@@ -6,6 +6,7 @@
     --cor-darker: #251219fa;
     --cor-input-form: #a7818f;
     --cor-hover: rgb(235, 208, 227);
+    --cor-desativado: rgb(139, 115, 132);
     --cor-texto: rgb(255, 231, 200);
     --cor-texto-header: #dc9d55;
     --cor-footer: rgba(33, 37, 41, 1);
@@ -151,6 +152,7 @@ header {
 
 .active:hover {
     color: var(--cor-carregamento);
+    background: var(--cor-header);
 }
 
 /* Container */

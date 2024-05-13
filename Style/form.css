@@ -17,6 +17,13 @@
     text-align: center;
 }
 
+.form-container h2 {
+    margin-top: 1em;
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+}
+
 .form {
     display: flex;
     flex-wrap: wrap;
@@ -45,6 +52,10 @@
     border-radius: 5px;
     border: none;
     background-color: var(--cor-hover);
+}
+
+.form input.desativado {
+    background-color: var(--cor-desativado);
 }
 
 #btn-enviar {
