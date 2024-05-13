@@ -12,8 +12,8 @@
     <?php 
         require_once("../php/sessao/verificaUsuario.php");
         verificaUsuario();
+        include("../php/consultas/consultaDadosPerfil.php");
     ?>
-        
 
     <div class="form-container">
         <?php 
@@ -24,22 +24,22 @@
             <div class="divisao">
                 <!-- Nome -->
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" required>
+                <input type="text" name="nome" required value="<?php echo "$nome"?>">
                 <!-- Username -->
                 <label for="username">Username:</label>
-                <input class="desativado" type="text" name="username" disabled>
+                <input class="desativado" type="text" name="username" disabled value="<?php echo "$username"?>">
                 <!-- Email -->
                 <label for="email">Email:</label>
-                <input class="desativado" type="email" name="email" disabled>
+                <input class="desativado" type="email" name="email" disabled value="<?php echo "$email"?>">
                 <!-- CPF -->
                 <label for="cpf">CPF:</label>
-                <input class="desativado" type="text" name="cpf" disabled>
+                <input class="desativado" type="text" name="cpf" disabled value="<?php echo "$cpf"?>">
                 <!-- Celular -->
                 <label for="celular">Celular:</label>
-                <input type="text" name="celular" required>
+                <input type="text" name="celular" required value="<?php echo "$celular"?>">
                 <!-- Data de Nascimento -->
                 <label for="data-nascimento">Data de Nascimento:</label>
-                <input type="date" name="data-nascimento" required>
+                <input type="date" name="data-nascimento" required value="<?php echo "$dataNascimento"?>">
             </div>
 
             <div class="divisao">
