@@ -115,6 +115,7 @@ VALUES ('12345-678', 'Rua A', '123', 'Cidade A', 'Paraná'),
 -- Associar usuários aos endereços na tabela intermediária
 INSERT INTO usuario_endereco (usuario_id, endereco_id)
 VALUES (1, 1), -- João com endereço da Rua A
+	   (1, 2),
        (2, 2), -- Maria com endereço da Rua B
        (3, 2),
        (4, 2),
@@ -124,3 +125,9 @@ VALUES (1, 1), -- João com endereço da Rua A
 select * from usuarios;
 select * from enderecos;
 select * from usuario_endereco;
+
+SELECT e.cep, e.rua, e.num_res, e.cidade, e.estado
+FROM usuarios u
+INNER JOIN usuario_endereco ue ON u.id = ue.usuario_id
+INNER JOIN enderecos e ON ue.endereco_id = e.id
+WHERE u.id = 1;
