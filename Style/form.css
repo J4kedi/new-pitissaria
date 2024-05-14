@@ -44,7 +44,7 @@
     font-size: 1.2em;
 }
 
-.form input {
+.form input, select {
     width: 20em;
     height: 35px;
     padding: 4px;

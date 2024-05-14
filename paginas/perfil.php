@@ -48,16 +48,21 @@
                 <input type="text" name="cep" required value="<?php echo "$cep"?>">
                 <!-- Estado -->
                 <label for="estado">Estado:</label>
-                <input type="text" name="estado" required value="<?php echo "$estado"?>">
+                <input class="desativado" type="text" name="estado" required disabled value="<?php echo "$estado"?>">
                 <!-- Cidade -->
                 <label for="cidade">Cidade:</label>
-                <input type="text" name="cidade" required value="<?php echo "$cidade"?>">
+                <input class="desativado" type="text" name="cidade" required disabled value="<?php echo "$cidade"?>">
                 <!-- Rua -->
                 <label for="rua">Rua:</label>
                 <input type="text" name="rua" required value="<?php echo "$rua"?>">
                 <!-- Número Residência -->
                 <label for="num-res">Número Casa:</label>
                 <input type="number" name="num-res" required value="<?php echo "$numRes"?>">
+
+                <label for="endereco">Selecione seu endereco:</label>
+                <select id="endereco" name="endereco">
+                    <option value="<?php echo "$idEndereco"?>"><?php echo "$endereco"?></option>
+                </select>
             </div>
             <!-- Botão Enviar -->
             <button type="submit" id="btn-enviar">Salvar</button>

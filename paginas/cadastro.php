@@ -47,7 +47,7 @@
                 <input type="text" name="cep" required>
                 <!-- Cidade -->
                 <label for="cidade">Cidade:</label>
-                <input type="text" name="cidade" required>
+                <input class="desativado" type="text" name="cidade" required disabled>
                 <!-- Rua -->
                 <label for="rua">Rua:</label>
                 <input type="text" name="rua" required>
