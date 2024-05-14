@@ -11,7 +11,7 @@
     
     <?php 
         require_once("../php/sessao/verificaUsuario.php");
-        verificaUsuario();
+        verificaSessao();
         include("../php/consultas/consultaDadosPerfil.php");
     ?>
 

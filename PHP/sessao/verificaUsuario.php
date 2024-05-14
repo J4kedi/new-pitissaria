@@ -1,14 +1,23 @@
 <?php
-    function verificaUsuario() {
-        $usuarios = array("cliente", "pizzaiolo", "gerente");
+    function verificaSessao() {
+        if(!isset($_SESSION['sessao'])) {
+            header('location: ../paginas/index.php');
+            return True;
+        }
+    }
 
-        if(isset($_SESSION['sessao'])) {
-            foreach ($usuarios as $usuario) {
-                if ($usuario == 'cliente') {
-                    echo "";
-                }
-            }
-        } else {
+    function verificaSessaoCliente() {
+        if(verificaSessao()){
+            return;
+        } else if($_SESSION['tipo_usuario'] == "cliente") {
+            header('location: ../paginas/index.php');
+        }
+    }
+
+    function verificaSessaoPizzaiolo() {
+        if(verificaSessao()) {
+            return;
+        } else if ($_SESSION['tipo_usuario'] == "pizzaiolo"){
             header('location: ../paginas/index.php');
         }
     }
